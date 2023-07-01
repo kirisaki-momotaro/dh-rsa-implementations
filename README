@@ -1,0 +1,18 @@
+ALL TOOLS COMPILE SUCCESSFULLY AND IMPLEMENT THE FUNCTIONALITY DESCRIBED IN THE ASSIGNMENT FILE.
+
+gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0
+
+note for execution: after running make the programs can be executed with the exact commands as in the excerise description, you can even copy paste.
+
+The tools are compiled using the make command through the instructions of the MAKEFILE.
+
+TOOL 1: dh_assign_1.c 
+Implements the Diffie-Hellman Key Exchange Tool. Reads from the command line the nessesary arguments, among them the 2 private keys and calculates and outputs the 2 public keys that derive from them. The common final secret key that will occur in both sides is also calculated and outputed at the designated output file in the format <public key A>, <public key B>, <shared secret>. the calculations are conducted using the equations given in the assignment paper.
+
+TOOL 2: rsa_assign_1.c
+Implements the specified iteration of the RSA encryption Tool. The tool can be instructed to generate the required private and public keys,to encrypt a message, to decrypt a message.
+The encryption runs by encrypting the desired text byte-by-byte using the designated keys and outputing for each byte an 8-byte encrypted text on the output file.The decryption works in the opposite manner by reading from th encrypted file 8-bytes at a time and using the other set of keys decrypting them in the 1-byte equivalent,storing them in th eend in the designated output file.
+
+
+
+IMPORTANT NOTE:Due to the nature of the excersise it wasn't deemed as important for the progamm to be dynamically able to accept input numbers of any size(neither was it specifically noted so on the assignment paper) , so even if it could easilly have been implemented using the gmp function gmp_scanf() i WAS NOT. so please refrain from using input numbers larger than 2147483647 in the dh_assign_1 and more than 1024 digits on the RSA.
